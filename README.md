@@ -7,7 +7,7 @@
 
 - `Dockerfile.dev`
   - 로컬 용
-  - 이미지 빌드 시 npm install 은 package.json 파일이 변경되었을 때만 실행하도록 하기 위해 COPY 부분을 둘로 나눈다. 
+  - 이미지 빌드 시 npm install 은 package.json 파일이 변경되었을 때만 실행하도록 하기 위해 COPY 부분을 둘로 나눈다.  
     ![image](https://github.com/user-attachments/assets/8fdc4f16-5bb3-4a81-8bd0-3c2f58a0dc91)
 
 - `Dockerfile`
