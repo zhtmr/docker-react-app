@@ -12,6 +12,7 @@
 
 - `Dockerfile`
   - 운영 용
+  - 로컬에서 터미널로 돌릴때와 달리 클라우드 환경에서 가동될 가볍고 빠른 서버가 필요함. (live-reload 등 개발 환경에 특화된 기능을 제외한 서버)
   - buildStage 에서 빌드한 파일을 nginx 에게 전달한다. (`COPY --from=builder /usr/src/app/build /usr/share/nginx/html`)
   - nginx 이미지의 경우 `/usr/share/nginx/html` 경로 아래로 static 파일 넣을 경우 알아서 페이지 찾아줌
     ![image](https://github.com/user-attachments/assets/81a52df6-449a-4d5e-ae03-5e7dc400090d)
