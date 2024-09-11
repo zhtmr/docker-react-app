@@ -1,16 +1,16 @@
 
 ## memo
-- docker-compose.yml
+- `docker-compose.yml`
   - 로컬 용
   - volumes : 로컬에는 컨테이너 내부의 `node_modules` 를 제외한 나머지만 매핑한다.   
     ![image](https://github.com/user-attachments/assets/6d23fca3-418b-45bd-a269-36ead4d53ad3)
 
-- Dockerfile.dev
+- `Dockerfile.dev`
   - 로컬 용
   - 이미지 빌드 시 npm install 은 package.json 파일이 변경되었을 때만 실행하도록 하기 위해 COPY 부분을 둘로 나눈다. 
     ![image](https://github.com/user-attachments/assets/8fdc4f16-5bb3-4a81-8bd0-3c2f58a0dc91)
 
-- Dockerfile
+- `Dockerfile`
   - 운영 용
   - buildStage 에서 빌드한 파일을 nginx 에게 전달한다. (`COPY --from=builder /usr/src/app/build /usr/share/nginx/html`)
   - nginx 이미지의 경우 `/usr/share/nginx/html` 경로 아래로 static 파일 넣을 경우 알아서 페이지 찾아줌
