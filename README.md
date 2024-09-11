@@ -16,5 +16,4 @@
   - buildStage 에서 빌드한 파일을 nginx 에게 전달한다. (`COPY --from=builder /usr/src/app/build /usr/share/nginx/html`)
   - nginx 이미지의 경우 `/usr/share/nginx/html` 경로 아래로 static 파일 넣을 경우 알아서 페이지 찾아줌
     ![image](https://github.com/user-attachments/assets/81a52df6-449a-4d5e-ae03-5e7dc400090d)
-    
     참고 : [https://hub.docker.com/_/nginx/](https://hub.docker.com/_/nginx/)
